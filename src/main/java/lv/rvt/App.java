@@ -6,14 +6,18 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("ievadisavu vardu>>");
-        String name = scanner.nextLine();
-        System.out.print("ievadisavu uzvardu>>");
-        String lastname = scanner.nextLine();
-        System.out.print("ievadisavu gruppu>>");
-        String group = scanner.nextLine();-
+        System.out.println("Chicken:");
+        String chicken = scanner.nextLine();
+        System.out.println("Bacon (kg):");
+        String bacon = scanner.nextLine();
+        System.out.println("Tractor:");
+        String tractor = scanner.nextLine();
 
-        System.out.println(name + " " + lastname + " " + group);
+
+        System.out.println("And finally, a summary:");
+        System.out.println(chicken);
+        System.out.println(bacon);
+        System.out.println(tractor);
 
     }
 
