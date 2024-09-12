@@ -4,21 +4,19 @@ public class App
 {
     public static void main( String[] args )
     {
+        // Scanner scanner = new Scanner(System.in);
+        // String input = scanner.nextLine();
+        // int InputAsInt = Integer.valueOf(scanner.nextLine());
+        // int InputAsDouble = Double.valueOf(scanner.nextLine());
+        // System.out.println(InputAsInt * 10);
 
-    // String userinput = scanner.nextLine();
-    // System.out.println(userinput);
-    // String start = "My name is ";
-    // String end = ", James Bond";
-    // int digit = 99;
-    // System.out.println("mani euro" + digit + 100);
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Ievadi savu vārdu:");
-    String name = scanner.nextLine();
-    System.out.println("Ievadi savu uzvārdu:");
-    String lastname = scanner.nextLine();
-    System.out.println("Ievadi savu gruppu:");
-    String group = scanner.nextLine();
-    System.out.println(name + " " + lastname + " " + group);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the first number:");
+        int second = Integer.valueOf(scanner.nextLine());
+        System.out.println(first + "+" + second + "=" + (first + second));
+
     }
 
 }
