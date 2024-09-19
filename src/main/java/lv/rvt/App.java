@@ -5,12 +5,19 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Value 1");
-        int value1 = Integer.valueOf(scanner.nextLine());
-        System.out.println("Value 1");
-        int value2 = Integer.valueOf(scanner.nextLine());
-        double result = Math.sqrt(value1 + value2);
-        System.out.println(result);
+
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
+
+            if (number == 0) {
+                break;
+            }else if (number < 0) {
+                System.out.println("Unsuitable number");
+                continue;
+            }
+
+            System.out.println(number * number);
+        }
     }
 }
