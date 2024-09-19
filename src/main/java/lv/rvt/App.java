@@ -4,23 +4,28 @@ public class App
 {
     public static void main( String[] args )
     {
-            int number = 90;
-              
-                if (number > 0 && number < 50) {
-                System.out.println("failed");
-              } else if (number > 49 && number < 60) {
-                System.out.println("1");
-              } else if (number > 59 && number < 70) {
-                System.out.println("2");
-              } else if (number > 69 && number < 80) {
-                System.out.println("3");
-              } else if (number > 79 && number < 90) {
-                System.out.println("4");
-              } else if (number > 89) {
-                System.out.println("5");
-              } else {
-                System.out.println("Impossible");
-              }
-        }
+        Scanner scanner = new Scanner(System.in);
+        double value = Double.valueOf(scanner.nextLine());
         
+              
+            if (value >= 5000 && value < 25000) {
+                System.out.println(100 + (value-5000) * 0.08);
+
+              } else if (value >= 25000 && value < 55000) {
+                System.out.println(1700 + (value-25000) * 0.1);
+
+              } else if (value >= 55000 && value < 200000) {
+                System.out.println(4700 + (value-55000) * 0.12);
+
+              } else if (value >= 200000 && value < 1000000) {
+                System.out.println(22100 + (value-200000) * 0.15);
+
+              } else if (value >= 1000000) {
+                System.out.println(142100 + (value-1000000) * 0.17);
+                
+              } else {
+                System.out.println("No tax");
+              }
+
+    }
 }
