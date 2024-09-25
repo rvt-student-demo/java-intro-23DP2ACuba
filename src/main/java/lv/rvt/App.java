@@ -5,19 +5,22 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-
+        int i = 0;
+        int sum = 0;
         while (true) {
             System.out.println("Give a number:");
             int number = Integer.valueOf(scanner.nextLine());
-
+            sum = sum + number;
             if (number == 0) {
                 break;
-            }else if (number < 0) {
-                System.out.println("Unsuitable number");
-                continue;
+            }else {
+                i = i + 1;
+
             }
 
-            System.out.println(number * number);
+            
         }
+        System.out.println("Number of numbers: " + i);
+        System.out.println("Sum of the numbers: " + sum);
     }
 }
