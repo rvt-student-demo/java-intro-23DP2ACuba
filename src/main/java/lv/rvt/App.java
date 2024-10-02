@@ -6,26 +6,15 @@ public class App
     {
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number:");
-        int i = 0, odd = 0, sum = 0, even = 0;
-        while (true) {
-            int input = Integer.valueOf(scanner.nextLine());
-            if (input == -1) {
-                break;
-            }
-            sum += input;
-            i++;
-            if (input % 2 == 0){
-                even++;
-            } else {
-                odd++;
-            }
-        }
-        System.out.println("Thx, bye");
-        System.out.println("Sum: " + sum);
-        System.out.println("Numbers:" + i);
-        System.out.println("Average; " + (sum / i));
-        System.out.println("Even: " + even);
-        System.out.println("Odd: " + odd);
+        System.out.println("How many times?");
+        int input = Integer.valueOf(scanner.nextLine());
+        while (input >= 0) {
+            printText();
+            input--;
+    }
+
+    }
+    public static void printText() {
+        System.out.println("In a hole in the ground there lived a method");
     }
 }
