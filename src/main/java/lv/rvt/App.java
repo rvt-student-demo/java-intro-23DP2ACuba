@@ -8,13 +8,13 @@ public class App
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many times?");
         int input = Integer.valueOf(scanner.nextLine());
-        while (input >= 0) {
-            printText();
-            input--;
-    }
+        printUntilNumber(input);
 
     }
-    public static void printText() {
-        System.out.println("In a hole in the ground there lived a method");
+    public static void printUntilNumber(int input) {
+        while (input >= 0) {
+            System.out.println("In a hole in the ground there lived a method");
+            input--;
+    }
     }
 }
