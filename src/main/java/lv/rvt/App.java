@@ -4,6 +4,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        Stars.printStars(4);
+        Stars.printStars(4, 16);
     }
 }
