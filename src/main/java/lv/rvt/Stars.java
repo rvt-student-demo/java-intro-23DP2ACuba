@@ -1,9 +1,9 @@
 package lv.rvt;
 
 public class Stars {
-    public static void printStars(int h, int w){
+    public static void printStars(int h){
         for (int i = 0; i < h; i++) {
-            for (int j = 0; j < w; j++){
+            for (int j = 0; j < i+1; j++){
                 System.out.print("*");
             }
             System.out.println();
