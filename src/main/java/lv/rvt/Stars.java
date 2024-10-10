@@ -19,6 +19,7 @@ public class Stars {
         }
 
     }
+    
     public static void printChristmasTree(int h){
         int j=0;
         for (int i = 1; i < h+1; i++){
