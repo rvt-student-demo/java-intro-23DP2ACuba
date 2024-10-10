@@ -6,7 +6,7 @@ public class App
     {
         //Stars.printSpace(10);
         //System.out.println();
-        Stars.printTriangle(4);
+        Stars.printChristmasTree(10);
 
     }
 }
