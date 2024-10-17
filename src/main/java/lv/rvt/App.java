@@ -6,8 +6,9 @@ public class App
         int vic = 0;
         String rating = "";
         for (int i = 0; i < 10; i++){
+            System.out.printf("round %d:\n", i+1);
             vic += game();
-            System.out.printf("You have won %d out of %d rounds.\n", vic, i+1);
+            System.out.printf("\nYou have won %d out of %d rounds.\n", vic, i+1);
             System.out.println();
         }
 
