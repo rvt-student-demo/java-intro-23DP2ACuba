@@ -1,6 +1,5 @@
 package lv.rvt;
 import java.util.*;
-import java.util.Random;
 public class App 
 {
     public static void main(String[] args) {
@@ -9,31 +8,32 @@ public class App
         int num = rand.nextInt(10);
         int score = 5;
         System.out.println("I am thinking of a number from 1 to 10. \n You must guess what it is in three tries. ");
-        for (int i = 0; i < 3; i++) {
+        System.out.println("Your beginning score is 5 points.");
+        while (true) {
             System.out.println("Enter a guess:");
             int guess = scanner.nextInt();
             if (guess == num){
                 System.out.println("RIGHT!\n You have won the game.");
                 break;
             } else {
-                if (i == 2){
-                    System.out.printf("wrong!\nThe correct number was %d.\nYou have lost the game.\n", num);
+                score--;
+                dif(guess, num, score);
+                if (score == 0){
+                    System.out.printf("The correct number was %d.\nYou have lost the game.\n", num);
                     break;
                 }
-                score--;
-                cwh(guess, num);
             }
 
         }
+        System.out.printf("Your score is %d \n", score);
     }
-    public static void cwh( int guess, int num){
-        if (guess - 1 == num || guess + 1 == num){
-            System.out.println("hot");
-        } else if (guess - 2 == num || guess + 2 == num) {
-            System.out.println("warm");
+    public static void dif( int guess, int num, int score){
+        if (guess > num){
+            System.out.print("Too high");
         } else {
-            System.out.println("cold");
+            System.out.print("To low");
         }
+        System.out.printf(" Your score is now: %d \n", score);
     }
 
 }
