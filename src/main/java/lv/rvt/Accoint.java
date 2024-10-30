@@ -6,8 +6,4 @@ public class App
     }
 
 }
-public class Account
-{
-    private double balance;
-    priva
-}
+public class Account{}
