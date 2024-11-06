@@ -10,8 +10,15 @@ public class Agent
         this.ln = ln;
         
     }
-    public void printName()
+    public void print()
     {
         System.out.println("my name is " + this.ln + " , " + this.fn + " " + this.ln);
     }
+    public String toString()
+    {
+        String output = "";
+        output = "my name is " + this.ln + " , " + this.fn + " " + this.ln;
+        return output;
+    }
+
 }
