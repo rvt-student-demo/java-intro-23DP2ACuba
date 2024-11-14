@@ -9,7 +9,7 @@ public class PaymentCard {
 
     public String toString() {
         // Round the balance to 1 decimal place for better display
-        return String.format("The card has a balance of %.1f euros", this.balance);
+        return String.format("The card has a balance of " + this.balance + " euros");
     }
 
     public void eatAffordably() {

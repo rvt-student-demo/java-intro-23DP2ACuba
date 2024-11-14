@@ -5,29 +5,31 @@ public class Person {
     private int age;
     private int weight;
     private int height;
-
-    public Person(String initialName) {
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
-        this.name = initialName;
-    }
-
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
-    }
-
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-
-    public double bodyMassIndex() {
-        double heigthPerHundred = this.height / 100.0;
-        return this.weight / (heigthPerHundred * heigthPerHundred);
+    public Person(String name, int age, int weight, int height) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
     public String getName() {
-        String name = this.name;
-        return name;
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);
     }
 }

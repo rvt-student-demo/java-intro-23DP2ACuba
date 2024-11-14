@@ -21,10 +21,5 @@ public class Gauge {
     {
         return this.value;
     }
-    public boolean full(){
-        int full = 5;
-        if (value = full){
-            reut
-        }
-    }
+    
 }

@@ -1,2 +1,11 @@
-id, name, password
-1, root, 123
+name,age,weight,height
+John Doe,29,81,175
+Jane Smith,34,63,167
+Alice Brown,25,59,165
+Bob Johnson,40,90,185
+Charlie White,22,68,172
+Diana Green,33,72,170
+Eva Black,28,56,162
+Frank Blue,50,95,187
+Grace Red,39,65,165
+Harry Yellow,27,77,177
