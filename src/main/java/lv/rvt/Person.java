@@ -30,6 +30,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);
+        return String.format(" %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);
     }
 }
