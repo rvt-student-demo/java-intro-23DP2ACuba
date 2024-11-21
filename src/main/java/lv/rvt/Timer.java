@@ -11,7 +11,7 @@ class Timer {
 
     public void advance() {
         this.hsec += 1;
-        if (this.hsec >= 100) {
+        if (this.hsec >= 100) { 
             this.hsec = 0;
             this.sec += 1;
         }
