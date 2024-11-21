@@ -1,11 +1,13 @@
 package lv.rvt;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class PersonManager {
+
     public static ArrayList<Person> getPersonList() {
         String csv = "/workspaces/java-intro-23DP2ACuba/src/data/persons.csv";
         ArrayList<Person> personList = new ArrayList<>();

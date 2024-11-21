@@ -5,6 +5,7 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    
     public Person(String name, int age, int weight, int height) {
         this.name = name;
         this.age = age;
@@ -31,5 +32,9 @@ public class Person {
     @Override
     public String toString() {
         return String.format(" %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);
+    }
+
+    public String toCswRow() {
+        return String.format(" %s,%d,%d,%d", name, age, weight, height);
     }
 }

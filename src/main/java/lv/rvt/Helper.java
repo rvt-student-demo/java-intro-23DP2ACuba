@@ -18,7 +18,7 @@ public class Helper
     { 
         return Files.newBufferedWriter (getFilePath(filename), option);
     }   
-    private static Path getFilePath(String filename) throws FileNotFoundException {
+    public static Path getFilePath(String filename) throws FileNotFoundException {
         Path filePath = Paths.get("data", filename);
         if (!Files.exists(filePath)) 
         {
