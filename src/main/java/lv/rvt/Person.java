@@ -28,7 +28,9 @@ public class Person {
     public int getHeight() {
         return this.height;
     }
-
+    public void setWeight(int newweight){
+        this.weight = newweight;
+    }
     @Override
     public String toString() {
         return String.format(" %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);

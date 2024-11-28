@@ -2,7 +2,9 @@ package lv.rvt;
 
 public class HealthStation {
     public int weigh(Person person) {
-        int weight = person.getWeight();
-        return weight;
+        return person.getWeight();
+    }
+    public void feed(Person person) {
+        person.setWeight(person.getWeight() + 1);
     }
 }
