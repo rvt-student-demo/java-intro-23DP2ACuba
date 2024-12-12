@@ -1,27 +1,25 @@
 package lv.rvt;
 import java.util.*;
 import java.io.*;
-import java.nio.file.StandardOpenOption;
 
 public class App {
-    public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
 
-        PaymentCard annesCard = new PaymentCard(2);
+    public static void main(String[] args) throws Exception {
+        SimpleDate date = new SimpleDate(24, 3, 2017);
+        SimpleDate date2 = new SimpleDate(23, 7, 2017);
 
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+        Person leo = new Person("Leo", date, 62, 9);
+        Person lily = new Person("Lily", date2, 65, 8);
 
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
+        if (leo.equals(lily)) {
+            System.out.println("Is this quite correct?");
+        }
 
-        unicafeExactum.addMoneyToCard(annesCard, 100);
+        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
 
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
+        if (leo.equals(leoWithDifferentWeight)) {
+            System.out.println("Is this quite correct?");
+           
+        }
     }
 }
