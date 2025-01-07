@@ -2,9 +2,11 @@ package lv.rvt;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PersonManager {
 
@@ -33,6 +35,34 @@ public class PersonManager {
             e.printStackTrace();
         }
         return personList;
+    }
+
+    private static void showPeople(String csvFile) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(csvFile));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        }
+    }
+
+    private static void addPerson(String csvFile, Scanner scanner) {
+        System.out.println("Enter the person's name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter the person's age:");
+        String age = scanner.nextLine();
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile, true))) {
+            writer.write(name + "," + age);
+            writer.newLine();
+            System.out.println("Person added successfully.");
+        } catch (IOException e) {
+            System.out.println("Error writing to the file: " + e.getMessage());
+        }
     }
     
 }
