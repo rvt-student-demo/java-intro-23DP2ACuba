@@ -1,15 +1,12 @@
 package lv.rvt;
 
-import java.util.*;
-import java.io.*;
+import javax.swing.JFrame;
 
 public class App {
-    public static void main ( String[] args )
-    {
-       Box box = new  Box( 2.5, 5.0, 6.0 ) ;
-       Box newBox = new  Box( box ) ;
-       System.out.println( "length: " + newBox.length() + " height: " + newBox.width() +
-                         "width:  " + newBox.height() )  ;
-  
+    public static void main(String[] args) {
+        Box box1 = new Box(2.5, 5.0, 6.0);
+        Box box2 = new Box(2, 4.0, 5.0);
+        System.out.println(box1.nests(box2));
+        System.out.println(box2.nests(box1));
     }
 }
