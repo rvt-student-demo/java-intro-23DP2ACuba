@@ -1,10 +1,10 @@
 package lv.rvt;
 
 public class Box {
-    private double w;
-    private double h;
-    private double l;
-    private double side;
+    public double w;
+    public double h;
+    public double l;
+    public double side;
 
     public Box ( double width, double height, double length ) {
         this.w = width;
@@ -20,34 +20,30 @@ public class Box {
         this.l = oldBox.l;
     }
     private double faceArea(){
-        return this.l * this.w;
+        return l * w;
     }
     private double topArea(){
-        return this.l * this.h;
+        return l * h;
     }
     private double sideArea(){
-        return this.w * this.h;
+        return w * h;
     }
     public double area() {
         return 2 * faceArea() + 2 * topArea() + 2 * sideArea();
     }
     public double volume() {
-        return this.l * this.w * this.h;
+        return l * w * h;
     }
     public double length(){
-        return this.l;
+        return l;
     }
     public double width(){
-        return this.w;
+        return w;
     }
     public double height(){
-        return this.h;
+        return h;
     }
 
-    public Box niggerBox( Box oldBox )
-    {
-        return new Box( 0.75 * oldBox.width(),  0.75 * oldBox.height(), 0.75 * oldBox.length());
-    }
     public Box biggerBox( Box oldBox )
     {
         return new Box( 1.25 * oldBox.width(),  1.25 * oldBox.height(), 1.25 * oldBox.length());
