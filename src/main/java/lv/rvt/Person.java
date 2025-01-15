@@ -1,79 +1,44 @@
 package lv.rvt;
 
-public class Person {
+import java.util.ArrayList;
+
+public class Person{
     private String name;
-    private SimpleDate date;
+    private String adress;
     private int age;
     private int weight;
     private int height;
-    
-    public Person(String name, int age, int height, int weight) 
-    {
+    private SimpleDate date;
+
+    public Person(String name, int age, int height, int weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.height = height;
     }
-    public Person(String name, SimpleDate date , int height, int weight) 
-    {
+
+    public Person(String name, SimpleDate date, int height, int weight) {
         this.name = name;
         this.date = date;
         this.weight = weight;
         this.height = height;
     }
 
-    public String getName() 
-    {
-        return this.name;
+    public Person(String name, String adress) {
+        this.name = name;
+        this.adress = adress;
     }
-
-    public int getAge() 
-    {
-        return this.age;
+    public String getName(){
+        return name;
     }
-
-    public int getWeight() 
-    {
-        return this.weight;
+    public String getAdress(){
+        return adress;
     }
-
-    public int getHeight() 
-    {
-        return this.height;
-    }
-
-    public void setWeight(int newweight)
-    {
-        this.weight = newweight;
-    }
+    
 
     @Override
-    public String toString() 
-    {
-        return String.format(" %s, Age: %d, Weight: %d, Height: %d", name, age, weight, height);
-    }
-
-    public String toCswRow() 
-    {
-        return String.format(" %s,%d,%d,%d", name, age, weight, height);
-    }
-
-    public boolean equals(Object compared) 
-    {
-        if (this == compared) {
-            return true;
-        }
-        if (!(compared instanceof Person)) {
-            return false;
-        }
-
-        Person comparedPerson = (Person) compared;
-        return (this.name.equals(comparedPerson.name) &&
-        this.date.getDay() == comparedPerson.date.getDay() &&
-        this.date.getMonth() == comparedPerson.date.getMonth() &&
-        this.date.getYear() == comparedPerson.date.getYear() &&
-        this.weight == comparedPerson.weight &&
-        this.height == comparedPerson.height) ;
+    public String toString() {
+        return String.format("%s\n  %s", name, adress);
     }
 
 

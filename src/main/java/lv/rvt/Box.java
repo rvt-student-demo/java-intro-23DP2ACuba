@@ -1,10 +1,10 @@
 package lv.rvt;
 
 public class Box {
-    public double w;
-    public double h;
-    public double l;
-    public double side;
+    private double w;
+    private double h;
+    private double l;
+
 
     public Box ( double width, double height, double length ) {
         this.w = width;
@@ -12,7 +12,9 @@ public class Box {
         this.l = length;
     }
     public Box(double side){
-        this.side = side;
+        this.w = side;
+        this.l = side;
+        this.h = side;
     }
     public Box (Box oldBox ) {
         this.w = oldBox.w;
@@ -49,9 +51,9 @@ public class Box {
         return new Box( 1.25 * oldBox.width(),  1.25 * oldBox.height(), 1.25 * oldBox.length());
     }
     public boolean nests(Box insideBox){
-        return this.h > insideBox.height() &&
-                this.w > insideBox.width() &&
-                this.l > insideBox.length();
+        return h > insideBox.height() &&
+                w > insideBox.width() &&
+                l > insideBox.length();
     }
 
 }
